@@ -52,3 +52,7 @@
       color: white;
       text-shadow: black 0.1em 0.1em 0.2em  
 }
+
+#links a {
+      margin-right: 10px;
+}

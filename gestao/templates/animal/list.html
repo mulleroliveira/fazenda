@@ -16,7 +16,13 @@
                               <td>{{animal.nome}}</td>
                               <td>{{animal.raca}}</td>
                               <td>{{animal.codigo}}</td>
-                              <td><a href="/home/animais/{{c.id}}">Ver</a></td>
+                              <td>
+                                    <ul id="links">
+                                          <a href="/home/animais/{{animal.id}}">Detalhes</a>
+                                          <a href="/admin/gestao/animal/{{animal.id}}/change/">Editar</a>
+                                          <a href="/admin/gestao/animal/{{animal.id}}/delete/">Apagar</a>
+                                    </ul>
+                              </td>
                         </tr>
                         {% endfor %}
                   </tbody>
