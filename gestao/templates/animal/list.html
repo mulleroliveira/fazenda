@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="row">
+      <div class="col-md-12">
+            <table class="table panel">
+                  <thead>
+                        <tr>
+                              <th>Nome</th>
+                              <th>Raça</th>
+                              <th>Código</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        {% for animal in animais %}
+                        <tr>
+                              <td>{{animal.nome}}</td>
+                              <td>{{animal.raca}}</td>
+                              <td>{{animal.codigo}}</td>
+                              <td><a href="/home/animais/{{c.id}}">Ver</a></td>
+                        </tr>
+                        {% endfor %}
+                  </tbody>
+                  <tfoot>
+                        <p id="sistema">O sistema encontrou {{animais | length}} animal(is) cadastrado(s)</p>
+                  </tfoot>
+            </table>
+      </div>
+</div>
+{% endblock %}
