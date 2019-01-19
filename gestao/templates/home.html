@@ -1,7 +1,63 @@
-{% extends 'base.html' %} {% block conteudo %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block conteudo %}
+<div class="row">
+    <div class="col-md-6">
+        <img src="{% static 'assets/img/fazendeiro.jpg' %}" class="img-fazendeiros" alt="">
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'assets/img/animais.jpg' %}" class="img-animais" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card-body panel">
+            <h5 class="card-title">Fazendeiros</h5>
+            <p class="card-text">Veja todas as informações dos fazendeiros que trabalham na fazenda; nome, data de
+                nascimento ect.</p>
+            <a href="#" class="btn btn-primary">Detalhes</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card-body panel">
+            <h5 class="card-title">Animais</h5>
+            <p class="card-text">Aqui poderá ver todos os animais presente na fazenda. Pode ver o nome, raça, peso etc.</p>
+            <a href="#" class="btn btn-primary">Detalhes</a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table panel">
+                    <h3 class="lista_animais">Os 3 últimos animais cadastrados</h3>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Raça</th>
+                            <th>Código</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>...</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
-        <h1>Olá</h1>
+        <h3 class="dono">Dono da Fazenda</h3>
+        <div class="img">
+            <img src="{% static 'assets/img/lula.jpeg' %}" class="foto-dono" alt="">
+        </div>
+        <div class="texto">
+            <h1>Lula</h1>
+            <p>"A marisa letícia que é a dona da fazenda, e não eu."</p>
+        </div>
     </div>
 </div>
 {% endblock %}

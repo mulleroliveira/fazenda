@@ -24,7 +24,10 @@ body {
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
-    background-color: darkgrey;
+    background-image: url(../img/fazenda.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
    
 }
 #page-inner {
@@ -255,7 +258,7 @@ font-weight: 700;
 	text-shadow:none;
 }
 .sidebar-collapse > .nav > li > a {
-	padding:5px 15px;
+	padding: 20px 15px;
 }
 .sidebar-collapse > .nav > li {
 	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
@@ -263,7 +266,7 @@ font-weight: 700;
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
 	
-	background:#0A0A0A;
+	background:rgb(57, 201, 0);
 	outline:0;
 }
 

@@ -1,0 +1,49 @@
+.img-fazendeiros {
+    width: 460px;
+    border-radius: 20px;
+}
+
+.img-animais {
+      width: 475px;
+      border-radius: 20px;
+
+}
+
+.card-body {
+      width: 450px;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 100px;
+}
+
+.card-title {
+      font-size: 20px;
+      text-transform: uppercase;
+}
+
+.lista_animais {
+      text-align: center;
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.foto-dono {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+}
+
+.dono {
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.img {
+      display: table-cell;
+}
+
+.texto {    
+      display: table-cell;
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.5em;
+}
