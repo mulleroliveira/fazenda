@@ -60,3 +60,13 @@
 #nome-animal {
       text-align: center;
 }
+
+#nome-fazendeiro {
+      text-align: center;
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em      
+}
+
+.espacamento-linha {
+      margin-left: 332px;
+}

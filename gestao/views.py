@@ -24,3 +24,7 @@ def show_animal(request, animal_id):
 def list_fazendeiros(request):
       fazendeiros = Fazendeiro.objects.all()
       return render(request, 'fazendeiro/list.html', {'fazendeiros':fazendeiros})
+
+def show_fazendeiro(request, fazendeiro_id):
+      fazendeiro = Fazendeiro.objects.get(id=fazendeiro_id)
+      return render(request, 'fazendeiro/show.html', {'fazendeiro':fazendeiro})

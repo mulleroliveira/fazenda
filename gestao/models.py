@@ -42,7 +42,13 @@ class Fazendeiro(models.Model):
             ('TO','Tocantins'),
       )
 
+      sexo_choices = (
+            ('M','Masculino'),
+            ('F','Feminino')
+      )
+
       nome = models.CharField(max_length=20)
+      sexo = models.CharField(max_length=1, choices=sexo_choices)
       data_nasc = models.DateField()
       cpf = models.CharField(max_length=11)
       rg = models.CharField(max_length=9)
