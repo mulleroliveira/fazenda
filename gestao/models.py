@@ -2,17 +2,11 @@ from django.db import models
 
 class Animal(models.Model):
 
-      especialidade_choices = (
-            ('Abate', 'Abate'),
-            ('Reprodutor', 'Reprodutor')
-      )
-
       nome = models.CharField(max_length=20)
-      cientifico = models.CharField(max_length=20, verbose_name='Nome Científico')
-      expectativa = models.CharField(max_length=10, verbose_name='Expectativa de Vida')
-      periodo = models.CharField(max_length=10, verbose_name='Periodo de Gestação')
-      peso = models.DecimalField(max_digits=6, decimal_places=2)
-      velocidade = models.IntegerField()
-      codigo = models.CharField(max_length=11, verbose_name='Código de Identificação')
+      sexo = models.CharField(max_length=1, choices=[('M','Macho'),('F','Fêmea')])
       raca = models.CharField(max_length=20, verbose_name='Raça')
-      objetivo = models.CharField(max_length=10, choices=especialidade_choices)
+      cientifico = models.CharField(max_length=20, verbose_name='Nome Científico')
+      peso = models.DecimalField(max_digits=6, decimal_places=2)
+      tamanho = models.DecimalField(max_digits=5,decimal_places=2)
+      expectativa = models.IntegerField(verbose_name='Expectativa de Vida')
+      objetivo = models.CharField(max_length=10, choices=[('Abate','Abate'),('Reprodutor','Reprodutor')])

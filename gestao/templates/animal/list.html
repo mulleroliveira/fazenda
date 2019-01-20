@@ -15,7 +15,7 @@
                         <tr>
                               <td>{{animal.nome}}</td>
                               <td>{{animal.raca}}</td>
-                              <td>{{animal.codigo}}</td>
+                              <td>{{animal.id}}</td>
                               <td>
                                     <ul id="links">
                                           <a href="/home/animais/{{animal.id}}">Detalhes</a>
@@ -26,7 +26,7 @@
                         </tr>
                         {% endfor %}
                   </tbody>
-                  <tfoot>
+                  <tfoot clear="left">
                         <p id="sistema">O sistema encontrou {{animais | length}} animal(is) cadastrado(s)</p>
                   </tfoot>
             </table>
