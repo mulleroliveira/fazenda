@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="row">
+      <div class="col-md-12">
+            <ol class="breadcrumb">
+                  <li><a href="/home/">Home</a></li>
+                  <li><a href="/home/fazendeiros">Fazendeiros</a></li>
+                  <li><a href="/home/animais">Voltar</a></li>
+            </ol>
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-4">
+            <hr class="featurette-divider">
+      </div>
+      <div class="col-lg-4">
+      </div>
+      <div class="col-md-4">
+            <hr class="featurette-divider">
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-12">
+            <h1 id="nome-animal"><a target="_blank" href="https://www.google.com/search?ei=DAFEXKayDcLZ5OUP-72D0AE&q={{animal.nome}}+{{animal.raca}}">{{animal.nome}}</a></h1>
+            <table class="table panel">
+                  <thead>
+                        <tr>
+                              <th>Sexo</th>
+                              <th>Raça</th>
+                              <th>Nome Científico</th>
+                              <th>Peso</th>
+                              <th>Tamanho</th>
+                              <th>Expectativa de vida</th>
+                              <td>Objetivo</td>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        <tr>
+                              <th>{{animal.sexo}}</th>
+                              <td>{{animal.raca}}</td>
+                              <td>{{animal.cientifico}}</td>
+                              <td>{{animal.peso}} Kg</td>
+                              <td>{{animal.tamanho}} m</td>
+                              <td>{{animal.expectativa}} Anos</td>
+                              <td>{{animal.objetivo}}</td>
+                        </tr>
+                  </tbody>
+            </table>
+      </div>
+</div>
+{% endblock %}

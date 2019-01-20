@@ -1,7 +1,6 @@
 from django.db import models
 
 class Animal(models.Model):
-
       nome = models.CharField(max_length=20)
       sexo = models.CharField(max_length=1, choices=[('M','Macho'),('F','Fêmea')])
       raca = models.CharField(max_length=20, verbose_name='Raça')

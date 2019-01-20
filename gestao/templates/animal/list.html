@@ -2,6 +2,14 @@
 {% block conteudo %}
 <div class="row">
       <div class="col-md-12">
+            <ol class="breadcrumb">
+                  <li><a href="/home">Voltar</a></li>
+                  <li><a href="/home/fazendeiros">Fazendeiros</a></li>
+            </ol>
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-12">
             <table class="table panel">
                   <thead>
                         <tr>
@@ -26,8 +34,8 @@
                         </tr>
                         {% endfor %}
                   </tbody>
-                  <tfoot clear="left">
-                        <p id="sistema">O sistema encontrou {{animais | length}} animal(is) cadastrado(s)</p>
+                  <tfoot>
+                        <p id="sistema">O sistema encontrou {{animais | length}} animais cadastrados!</p>
                   </tfoot>
             </table>
       </div>

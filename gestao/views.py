@@ -16,3 +16,7 @@ def home(request):
 def list_animais(request):
       animais = Animal.objects.all()
       return render(request, 'animal/list.html', {'animais':animais})
+
+def show_animal(request, animal_id):
+      animal = Animal.objects.get(id=animal_id)
+      return render(request, 'animal/show.html', {'animal':animal})
