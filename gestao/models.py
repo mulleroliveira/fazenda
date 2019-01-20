@@ -51,3 +51,4 @@ class Fazendeiro(models.Model):
       altura = models.DecimalField(max_digits=3, decimal_places=2)
       cidade = models.CharField(max_length=20)
       estado = models.CharField(max_length=2, choices=choices_estado)
+      salario = models.DecimalField(max_digits=6, decimal_places=2)

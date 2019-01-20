@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block active-fazendeiros %}
+active-menu
+{% endblock %}
+
+{% block conteudo %}
+<div class="row">
+      <div class="col-md-12">
+            <ol class="breadcrumb">
+                  <li><a href="/home/animais">Animais</a></li>
+                  <li><a href="/home">Voltar</a></li>
+            </ol>
+      </div>
+</div>
+<div class="row">
+      <div class="col-md-12">
+            <table class="table panel">
+                  <thead>
+                        <tr>
+                              <th>Nome</th>
+                              <th>CPF</th>
+                              <th>Código</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        {% for fazendeiro in fazendeiros %}
+                        <tr>
+                              <td>{{fazendeiro.nome}}</td>
+                              <td>{{fazendeiro.cpf}}</td>
+                              <td>{{fazendeiro.id}}</td>
+                              <td>
+                                    <ul id="links">
+                                          <a href="/home/fazendeiros/{{fazendeiro.id}}">Detalhes</a>
+                                          <a href="/admin/gestao/fazendeiro/{{fazendeiro.id}}/change/">Editar</a>
+                                          <a href="/admin/gestao/fazendeiro/{{fazendeiro.id}}/delete/">Apagar</a>
+                                    </ul>
+                              </td>
+                        </tr>
+                        {% endfor %}
+                  </tbody>
+                  <tfoot>
+                        <p id="sistema">O sistema encontrou {{fazendeiros | length}} fazendeiros cadastrados!</p>
+                  </tfoot>
+            </table>
+      </div>
+</div>
+{% endblock %}

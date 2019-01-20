@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import Animal
+from . models import Animal, Fazendeiro
 
 def home(request):
       lista = []
@@ -20,3 +20,7 @@ def list_animais(request):
 def show_animal(request, animal_id):
       animal = Animal.objects.get(id=animal_id)
       return render(request, 'animal/show.html', {'animal':animal})
+
+def list_fazendeiros(request):
+      fazendeiros = Fazendeiro.objects.all()
+      return render(request, 'fazendeiro/list.html', {'fazendeiros':fazendeiros})
