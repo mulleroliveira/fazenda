@@ -24,10 +24,9 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/admin">Admin</a>
+                <a class="navbar-brand" href="/home">Admin</a>
             </div>
-            <div style="color: white;padding: 15px 50px 5px 50px;float: right; font-size: 16px;"> Last access : 30 May
-                2014 &nbsp;
+            <div style="color: white;padding: 15px 50px 5px 50px;float: right; font-size: 16px;"> Last access : &nbsp;
                 <a href="/" class="btn btn-danger square-btn-adjust">Logout</a>
             </div>
         </nav>
@@ -36,42 +35,24 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li class="text-center">
-                        <img src="https://images.vexels.com/media/users/3/128325/isolated/lists/0f52205b21536ca0dbbdac51891348e0-desenhos-animados-do-velho-fazendeiro.png"
+                        <img src="{% static 'assets/img/home.png' %}"
                             class="user-image img-responsive" />
                     </li>
-
-
                     <li>
-                        <a class="active-menu" href="/home">
-                            <i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a class="{% block active-home %} {% endblock %}" href="/home">
+                            <i class="fa fa-dashboard fa-3x"></i> Home</a>
                     </li>
                     <li>
-                        <a href="ui.html">
-                            <i class="fa fa-desktop fa-3x"></i> UI Elements</a>
+                        <a class="{% block active-animais %} {% endblock %}" href="/home/animais">
+                            <i class="fa fa-bar-chart-o fa-3x"></i> Animais</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html">
-                            <i class="fa fa-qrcode fa-3x"></i> Tabs & Panels</a>
+                        <a href="/home/fazendeiros">
+                            <i class="fa fa-bolt fa-3x"></i> Fazendeiros</a>
                     </li>
                     <li>
-                        <a href="chart.html">
-                            <i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
-                    </li>
-                    <li>
-                        <a href="table.html">
-                            <i class="fa fa-table fa-3x"></i> Table Examples</a>
-                    </li>
-                    <li>
-                        <a href="form.html">
-                            <i class="fa fa-edit fa-3x"></i> Forms </a>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            <i class="fa fa-bolt fa-3x"></i> Login</a>
-                    </li>
-                    <li>
-                        <a href="registeration.html">
-                            <i class="fa fa-laptop fa-3x"></i> Registeration</a>
+                        <a href="/admin">
+                            <i class="fa fa-laptop fa-3x"></i> Registrar</a>
                     </li>
                 </ul>
 
