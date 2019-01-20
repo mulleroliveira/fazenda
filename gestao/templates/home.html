@@ -32,16 +32,18 @@
                         <tr>
                             <th>Nome</th>
                             <th>Raça</th>
-                            <th>Código</th>
+                            <th>ID</th>
 
                         </tr>
                     </thead>
                     <tbody>
+                        {% for c in lista %}
                         <tr>
-                            <th>...</th>
-                            <td>...</td>
-                            <td>...</td>
+                            <th>{{c.nome}}</th>
+                            <td>{{c.raca}}</td>
+                            <td>{{c.id}}</td>
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
