@@ -6,7 +6,6 @@
 .img-animais {
       width: 475px;
       border-radius: 20px;
-
 }
 
 .card-body {
@@ -27,25 +26,16 @@
       text-shadow: black 0.1em 0.1em 0.2em
 }
 
-.foto-dono {
+.foto {
       width: 200px;
       height: 200px;
       border-radius: 50%;
 }
 
-.dono {
+.cargo {
+      text-align: center;
       color: white;
       text-shadow: black 0.1em 0.1em 0.2em
-}
-
-.img {
-      display: table-cell;
-}
-
-.texto {    
-      display: table-cell;
-      color: white;
-      text-shadow: black 0.1em 0.1em 0.5em;
 }
 
 #sistema {
@@ -69,4 +59,10 @@
 
 .espacamento-linha {
       margin-left: 332px;
+}
+
+.nome-frase h1, #frase{
+      text-align: center;
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em;
 }
