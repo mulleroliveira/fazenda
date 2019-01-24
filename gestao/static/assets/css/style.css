@@ -61,8 +61,12 @@
       margin-left: 332px;
 }
 
-.nome-frase h1, #frase{
+.nome-frase h1, label{
       text-align: center;
       color: white;
       text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+label {
+      background-color: rgba(3, 84, 151, 0.466);
 }
