@@ -8,7 +8,7 @@ class Animal(models.Model):
       peso = models.DecimalField(max_digits=6, decimal_places=2)
       tamanho = models.DecimalField(max_digits=5,decimal_places=2)
       expectativa = models.IntegerField(verbose_name='Expectativa de Vida')
-      objetivo = models.CharField(max_length=10, choices=[('Abate','Abate'),('Reprodutor','Reprodutor')])
+      tipo_criacao = models.CharField(max_length=10, choices=[('Abate','Abate'),('Reprodutor','Reprodutor')])
 
 class Fazendeiro(models.Model):
 
