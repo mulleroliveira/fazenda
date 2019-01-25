@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fazenda do Lula</title>
+    <link rel="icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon" />
     <!-- BOOTSTRAP STYLES-->
     <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
@@ -26,6 +27,7 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="/home">Admin</a>
             </div>
+            <div id="turno">{{turno}}</div>
         </nav>
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -72,7 +74,7 @@
     <script src="{% static 'assets/js/morris/raphael-2.1.0.min.js' %}"></script>
     <script src="{% static 'assets/js/morris/morris.js' %}"></script>
     <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
 
 </html>

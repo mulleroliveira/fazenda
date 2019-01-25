@@ -1,15 +1,7 @@
-.img-fazendeiros {
-    width: 460px;
-    border-radius: 20px;
-}
-
-.img-animais {
-      width: 475px;
-      border-radius: 20px;
-}
-
 .card-body {
-      width: 450px;
+      margin-left: 80px;
+      height: 50px;
+      width: 300px;
       margin-top: 10px;
       text-align: center;
       border-radius: 100px;
@@ -17,6 +9,7 @@
 
 .card-title {
       font-size: 20px;
+      color: white;
       text-transform: uppercase;
 }
 
@@ -68,5 +61,26 @@
 }
 
 label {
+      display: inline;
       background-color: rgba(3, 84, 151, 0.466);
+}
+
+#turno {
+      color: white;
+      font-size: 25px;
+      float: right;
+      padding: 12px 25px 15px;
+}
+
+#frase-carrousel {
+      font-size: 18px;
+      text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.foto-fazendeiro, .foto-animal {
+      margin-top: 20px;
+      margin-left: 130px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
 }

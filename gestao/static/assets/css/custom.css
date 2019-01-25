@@ -313,17 +313,17 @@ font-weight: 700;
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #C90000;
+background: rgb(57, 201, 0);
 color:#fff;
 
 }
 
-.navbar-default {
+.navbar-default {   
 border:0px solid black;
      
 }
 .navbar-header {
-    background: #A70303;
+    background:rgb(57, 201, 0);
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color:rgb(57, 201, 0);
