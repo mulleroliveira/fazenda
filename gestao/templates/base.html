@@ -25,7 +25,7 @@
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/home">Admin</a>
+                <a class="navbar-brand" href="/gestao">Admin</a>
             </div>
             <div id="turno">{{turno}}</div>
         </nav>
@@ -37,20 +37,27 @@
                         <img src="{% static 'assets/img/home.png' %}" class="user-image img-responsive" />
                     </li>
                     <li>
-                        <a class="{% block active-home %} {% endblock %}" href="/home">
+                        <a class="{% block active-home %} {% endblock %}" href="/gestao">
                             <i class="fa fa-dashboard fa-3x"></i> Home</a>
                     </li>
                     <li>
-                        <a class="{% block active-animais %} {% endblock %}" href="/home/animais">
+                        <a class="{% block active-animais %} {% endblock %}" href="/gestao/animais">
                             <i class="fa fa-bar-chart-o fa-3x"></i> Animais</a>
                     </li>
                     <li>
-                        <a class="{% block active-fazendeiros %} {% endblock %}" href="/home/fazendeiros">
+                        <a class="{% block active-fazendeiros %} {% endblock %}" href="/gestao/fazendeiros">
                             <i class="fa fa-bolt fa-3x"></i> Fazendeiros</a>
                     </li>
-                    <li>
-                        <a href="/admin">
-                            <i class="fa fa-laptop fa-3x"></i> Registrar</a>
+                    <li class="">
+                        <a href="#"><i class="fa fa-edit fa-3x"></i>Forms<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                            <li>
+                                <a href="/gestao/animal/form/">Animal</a>
+                            </li>
+                            <li>
+                                <a href="#">Fazendeiro</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

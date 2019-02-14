@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
-    path('animais/', views.list_animais),
-    path('animais/<int:animal_id>/', views.show_animal),
-    path('fazendeiros/', views.list_fazendeiros),
-    path('fazendeiros/<int:fazendeiro_id>/', views.show_fazendeiro)
+    path('animais/', views.animais_list),
+    path('animais/<int:animal_id>/', views.animal_show),
+    path('animais/form/', views.animal_form),
+    path('fazendeiros/', views.fazendeiros_list),
+    path('fazendeiros/<int:fazendeiro_id>/', views.fazendeiro_show),
 ]
