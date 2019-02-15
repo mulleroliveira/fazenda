@@ -9,14 +9,20 @@ active-menu
       <div class="col-md-12">
             <section class="panel">
                   <header class="panel-heading">
-                        Basic Forms
+                        Fazendeiro Form
                   </header>
                   <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="/gestao/fazendeiros/form/" method="POST">
+                              {% csrf_token %}
                               {% for c in form %}
                               <div class="form-group">
                                     <label for="{{c.id_for_label}}">{{c.label}}</label>
-                                    {{c}}
+                                    <div>
+                                          {{c}}
+                                          {% for error in c.errors %}
+                                          <label for="{{c.id_for_label}}" class="error">{{error}}</label>
+                                          {% endfor %}
+                                    </div>
                               </div>
                               {% endfor %}
                               <button type="submit" class="btn btn-primary">Enviar</button>

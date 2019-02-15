@@ -65,5 +65,13 @@ def fazendeiro_show(request, fazendeiro_id):
       return render(request, 'fazendeiro/show.html', {'fazendeiro':fazendeiro})
 
 def fazendeiro_form(request):
-      form = FazendeiroForm()
-      return render(request, 'fazendeiro/form.html', {'form':form})
+      if request.method == 'POST':
+            form = FazendeiroForm(request.POST)
+            if form.is_valid():
+                  form.save()
+                  return redirect('/gestao/fazendeiros/')
+            else:
+                  return render(request, 'fazendeiro/form.html', {'form':form})
+      else:
+            form = FazendeiroForm()
+            return render(request, 'fazendeiro/form.html', {'form':form})
