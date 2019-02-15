@@ -42,6 +42,20 @@ def animal_form(request):
             form = AnimalForm()
             return render(request, 'animal/form.html', {'form':form})
 
+def animal_edit(request, animal_id):
+      if request.method == 'POST':
+            animal = Animal.objects.get(pk=animal_id)
+            form = AnimalForm(request.POST, instance=animal)
+            if form.is_valid():
+                  form.save()
+                  return redirect('/gestao/animais/')
+            else:
+                  return render(request, 'animal/edit.html', {'form':form, 'animal_id':animal_id})
+      else:      
+            animal = Animal.objects.get(pk=animal_id)
+            form = AnimalForm(instance=animal)
+            return render(request, 'animal/edit.html', {'form':form, 'animal_id':animal_id})
+
 def fazendeiros_list(request):
       fazendeiros = Fazendeiro.objects.all()
       return render(request, 'fazendeiro/list.html', {'fazendeiros':fazendeiros})
