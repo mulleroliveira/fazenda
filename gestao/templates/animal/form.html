@@ -1,17 +1,26 @@
-{% extends 'base.html' %} 
-
-{% block active-form %}
-active-menu
-{% endblock %}
-
-{% block conteudo %}
+{% extends 'base.html' %} {% block active-form %} active-menu {% endblock %} {% block conteudo %}
 <div class="row">
       <div class="col-md-12">
-            <form action="/gestao/animais/form/" method="POST">
-                  {% csrf_token %}
-                  {{form}}
-                  <button type="submit">Cadastrar</button>
-            </form>
+            <section class="panel">
+                  <header class="panel-heading">
+                        Animal Form
+                  </header>
+                  <div class="panel-body">
+                        <form role="form" action="/gestao/animais/form/" method="POST">
+                              {% for c in form %} {% csrf_token %}
+                              <div class="form-group">
+                                    <label for="{{c.id_for_label}}">{{c.label}}</label>
+                                    <div>
+                                          {{c}} {% for error in c.errors %}
+                                          <label for="{{c.id_for_label}}" class="error">{{error}}</label>
+                                          {% endfor %}
+                                    </div>
+                              </div>
+                              {% endfor %}
+                              <button type="submit" class="btn btn-dark">Salvar</button>
+                        </form>
+                  </div>
+            </section>
       </div>
 </div>
 {% endblock %}

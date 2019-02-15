@@ -60,7 +60,7 @@
       text-shadow: black 0.1em 0.1em 0.2em;
 }
 
-label {
+.frase {
       display: inline;
       background-color: rgba(3, 84, 151, 0.466);
 }
@@ -87,4 +87,8 @@ label {
 
 #cadastro {
       float: right;
+}
+
+.error {
+      color: crimson;
 }

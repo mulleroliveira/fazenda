@@ -33,8 +33,11 @@ def animal_show(request, animal_id):
 def animal_form(request):
       if request.method == 'POST':
             form = AnimalForm(request.POST)
-            form.save()
-            return redirect('/gestao/animais/')
+            if form.is_valid():
+                  form.save()
+                  return redirect('/gestao/animais/')
+            else:
+                  return render(request, 'animal/form.html', {'form':form})
       else:
             form = AnimalForm()
             return render(request, 'animal/form.html', {'form':form})
