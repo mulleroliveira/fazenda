@@ -49,7 +49,7 @@ class Fazendeiro(models.Model):
 
       nome = models.CharField(max_length=20)
       sexo = models.CharField(max_length=1, choices=sexo_choices)
-      data_nasc = models.DateField()
+      data_nasc = models.DateField(verbose_name='Data de Nascimento')
       cpf = models.CharField(max_length=11)
       rg = models.CharField(max_length=9)
       funcao = models.CharField(max_length=20)

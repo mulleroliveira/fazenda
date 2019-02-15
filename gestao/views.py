@@ -75,3 +75,17 @@ def fazendeiro_form(request):
       else:
             form = FazendeiroForm()
             return render(request, 'fazendeiro/form.html', {'form':form})
+
+def fazendeiro_edit(request, fazendeiro_id):
+      if request.method == 'POST':
+            fazendeiro = Fazendeiro.objects.get(pk=fazendeiro_id)
+            form = FazendeiroForm(request.POST, instance=fazendeiro)
+            if form.is_valid():
+                  form.save()
+                  return redirect('/gestao/fazendeiros/')
+            else:
+                  return render(request, 'fazendeiro/edit.html', {'form':form, 'fazendeiro_id':fazendeiro_id})
+      else:
+            fazendeiro = Fazendeiro.objects.get(id=fazendeiro_id)
+            form = FazendeiroForm(instance=fazendeiro)
+            return render(request, 'fazendeiro/edit.html', {'form':form, 'fazendeiro_id':fazendeiro_id})

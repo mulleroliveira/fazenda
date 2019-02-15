@@ -10,4 +10,6 @@ urlpatterns = [
     path('fazendeiros/', views.fazendeiros_list),
     path('fazendeiros/<int:fazendeiro_id>/', views.fazendeiro_show),
     path('fazendeiros/form/', views.fazendeiro_form),
+    path('fazendeiros/<int:fazendeiro_id>/edit/', views.fazendeiro_edit),
+
 ]

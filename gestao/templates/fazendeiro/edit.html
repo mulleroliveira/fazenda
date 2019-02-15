@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block active-form %}
+active-menu
+{% endblock %}
+
+{% block conteudo %}
+<div class="row">
+      <div class="col-md-12">
+            <section class="panel">
+                  <header class="panel-heading">
+                        Fazendeiro Edit
+                  </header>
+                  <div class="panel-body">
+                        <form role="form" action="/gestao/fazendeiros/{{fazendeiro_id}}/edit/" method="POST">
+                              {% csrf_token %}
+                              {% for c in form %}
+                              <div class="form-group">
+                                    <label for="{{c.id_for_label}}">{{c.label}}</label>
+                                    <div>
+                                          {{c}}
+                                          {% for error in c.errors %}
+                                          <label for="{{c.id_for_label}}" class="error">{{error}}</label>
+                                          {% endfor %}
+                                    </div>
+                              </div>
+                              {% endfor %}
+                              <button type="submit" class="btn btn-primary">Enviar</button>
+                              <button type="reset" class="btn btn-primary">Limpar</button>
+                        </form>
+                  </div>
+            </section>
+      </div>
+</div>
+{% endblock %}
