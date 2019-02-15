@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import Animal, Fazendeiro
 from datetime import datetime, timedelta
 from . forms import AnimalForm
@@ -31,8 +31,13 @@ def animal_show(request, animal_id):
       return render(request, 'animal/show.html', {'animal':animal})
 
 def animal_form(request):
-      form = AnimalForm()
-      return render(request, 'animal/form.html', {'form':form})
+      if request.method == 'POST':
+            form = AnimalForm(request.POST)
+            form.save()
+            return redirect('/gestao/animais/')
+      else:
+            form = AnimalForm()
+            return render(request, 'animal/form.html', {'form':form})
 
 def fazendeiros_list(request):
       fazendeiros = Fazendeiro.objects.all()

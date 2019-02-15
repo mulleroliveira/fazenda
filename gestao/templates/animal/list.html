@@ -1,14 +1,10 @@
-{% extends 'base.html' %}
-
-{% block active-animais %}
-active-menu
-{% endblock %}
-
-{% block conteudo %}
+{% extends 'base.html' %} {% block active-animais %} active-menu {% endblock %} {% block conteudo %}
 <div class="row">
       <div class="col-md-12">
             <ol class="breadcrumb">
-                  <li><a href="/gestao">Voltar</a></li>
+                  <li>
+                        <a href="/gestao">Voltar</a>
+                  </li>
             </ol>
       </div>
 </div>
@@ -42,6 +38,7 @@ active-menu
                         <p id="sistema">O sistema encontrou {{animais | length}} animais cadastrados!</p>
                   </tfoot>
             </table>
+            <button id="cadastro" type="button" class="btn btn-dark"><a href="/gestao/animais/form/">Novo Animal</a></button>
       </div>
 </div>
 {% endblock %}

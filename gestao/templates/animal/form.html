@@ -1,8 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+
+{% block active-form %}
+active-menu
+{% endblock %}
+
 {% block conteudo %}
 <div class="row">
       <div class="col-md-12">
-            {{form}}
+            <form action="/gestao/animais/form/" method="POST">
+                  {% csrf_token %}
+                  {{form}}
+                  <button type="submit">Cadastrar</button>
+            </form>
       </div>
 </div>
 {% endblock %}
