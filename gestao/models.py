@@ -14,9 +14,9 @@ class Fazendeiro(models.Model):
 
       choices_estado = (
             ('AC','Acre'),
-            ('ALA','lagoas'),
+            ('AL','Alagoas'),
             ('AP','Amapá'),
-            ('AMA','mazonas'),
+            ('AM','Amazonas'),
             ('BA','Bahia'),
             ('CE','Ceará'),
             ('DF','Distrito Federal'),

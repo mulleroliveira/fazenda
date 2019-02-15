@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import Animal, Fazendeiro
 from datetime import datetime, timedelta
-from . forms import AnimalForm
+from . forms import AnimalForm, FazendeiroForm
 
 def horario():
       data_e_hora_atuais = datetime.today() - timedelta(hours=3)
@@ -63,3 +63,7 @@ def fazendeiros_list(request):
 def fazendeiro_show(request, fazendeiro_id):
       fazendeiro = Fazendeiro.objects.get(id=fazendeiro_id)
       return render(request, 'fazendeiro/show.html', {'fazendeiro':fazendeiro})
+
+def fazendeiro_form(request):
+      form = FazendeiroForm()
+      return render(request, 'fazendeiro/form.html', {'form':form})
