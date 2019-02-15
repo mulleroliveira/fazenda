@@ -44,6 +44,12 @@
       text-align: center;
 }
 
+#nome-animal a{
+      color: #428bca;
+      text-decoration: none;
+}
+
+
 #nome-fazendeiro {
       text-align: center;
       color: white;
@@ -54,13 +60,15 @@
       margin-left: 332px;
 }
 
-.nome-frase h1, label{
+.nome-frase h1{
       text-align: center;
       color: white;
       text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .frase {
+      color: white;
+      text-shadow: black 0.1em 0.1em 0.2em;
       display: inline;
       background-color: rgba(3, 84, 151, 0.466);
 }
@@ -89,6 +97,14 @@
       float: right;
 }
 
+a:hover {
+      color: black;
+}
+
 .error {
       color: crimson;
+}
+
+.nome-form {
+      text-transform: uppercase;
 }
